@@ -1,5 +1,5 @@
 import { useQuery, gql } from '@apollo/client';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Container } from '../../styles/global';
 import { LoadError } from '../LoadError/LoadError';
@@ -86,6 +86,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
         }
       })
       setFilterTopic(topics)
+      return
     })
   }
 
