@@ -39,15 +39,15 @@ const User = ({ perfil }: { perfil?: string }) => {
       />
     {userBox && <BoxUser>
       <LoadError loading={loading} error={error} />
-      <img src={user?.avatarUrl} />
+      <img src={user?.avatarUrl} alt={"foto "+ user?.name} />
       <Desc>
         <h3>{user?.name}</h3>
         <h4>{user?.bio}</h4>
 
         <div className='links'>
-          {user?.url && <a href={user?.url} target="_blank"><GitHubIcon /></a>}
-          {user?.twitterUsername && <a href={user?.twitterUsername} target="_blank"><TwitterIcon /></a>}
-          {user?.websiteUrl && <a href={user?.websiteUrl} target="_blank"><WwwIcon /></a>}
+          {user?.url && <a href={user?.url} target="_blank" rel="noreferrer"><GitHubIcon /></a>}
+          {user?.twitterUsername && <a href={user?.twitterUsername} target="_blank" rel="noreferrer"><TwitterIcon /></a>}
+          {user?.websiteUrl && <a href={user?.websiteUrl} target="_blank" rel="noreferrer"><WwwIcon /></a>}
         </div>
       </Desc>
     </BoxUser>

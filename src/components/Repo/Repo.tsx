@@ -71,6 +71,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
       let items: string[] = []
       i.node.repositoryTopics.edges.map(t => {
         items.push(t.node.topic.name)
+        return
       })
       topics.push({
         node: {
@@ -93,7 +94,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
   useEffect(() => {
     setList(listData)
     listTopics()
-  }, [data])
+  }, [data, listData, listTopics])
 
   const handleArchived = (value: boolean) => {
     const listFilter: any = []
@@ -129,7 +130,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
     <LoadError loading={loading} error={error} />
     <BoxGrid>
       {list && list?.map((repo) => {
-        const { node: { createdAt, id, isArchived, name, url, openGraphImageUrl, languages, repositoryTopics } } = repo
+        const { node: { createdAt, id, isArchived, name, url, languages, repositoryTopics } } = repo
         const lang = languages.edges
         const topics = repositoryTopics.edges
 
