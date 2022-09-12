@@ -9,7 +9,7 @@ const apolloConfig = () => {
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || process.env.github_token}`,
+        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || process.env.GITHUB_TOKEN}`,
       }
     }
   })
