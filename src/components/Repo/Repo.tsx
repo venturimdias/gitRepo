@@ -90,7 +90,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
       return i
     })
     return topics
-  }, [filterTopic, listData])
+  }, [filterTopic, data?.user.repositories.edges])
 
   useEffect(() => {
     setList(listData)
