@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import { Repo } from './components/Repo/Repo'
+import { MemoryIcon } from './components/svg/Icons'
+import { User } from './components/User/User'
+import GlobalStyle from './styles/global'
 
 function App() {
+  const perfil = "venturimdias" 
+  // const perfil = "ErickPetru"
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GlobalStyle />
+      <H1>
+        <div className='logo'><MemoryIcon /> gitRepos</div>     
+        <div><User perfil={perfil} /></div>
+      </H1>
+      <Repo perfil={perfil} />
     </div>
-  );
+  )
 }
+const H1 = styled.h1`
+  position: relative;
+  justify-content: space-between;
 
-export default App;
+  .logo{
+    display:flex;
+    align-items: center;
+    gap:10px;
+  }
+`
+export default App
