@@ -7,7 +7,6 @@ Criar um projeto com informações públicas do gitHub
 3. Pesquisar por stack (ex.: node).
 
 # Recursos Utilizados
-- Vite
 - React
 - Styled-component
 - GraphQL
