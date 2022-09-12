@@ -32,14 +32,14 @@ const User = ({ perfil }: { perfil?: string }) => {
   const [userBox, setUserBox] = useState(false)
 
   return <>
-    <Image src={user?.avatarUrl}
+    {user?.avatarUrl &&  <Image src={user?.avatarUrl}
       onMouseUp={() => setUserBox(!userBox)} 
       title="Informações do usuário" 
       alt="imagem usuário"
-      />
+      />}
     {userBox && <BoxUser>
       <LoadError loading={loading} error={error} />
-      <img src={user?.avatarUrl} alt={"foto "+ user?.name} />
+      {user?.avatarUrl && <img src={user?.avatarUrl} alt={"foto "+ user?.name} />}
       <Desc>
         <h3>{user?.name}</h3>
         <h4>{user?.bio}</h4>
