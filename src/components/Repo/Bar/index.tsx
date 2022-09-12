@@ -16,7 +16,7 @@ const Bar = ({ handleFilterCancel, handleArchived, setOrd, ord, handleSearch }: 
 
   const handleSearchInt = (e = '') => {
     const value = inputSearch.current?.value
-    if (e == 'Enter') {
+    if (e === 'Enter') {
       handleSearch(value?.toLocaleLowerCase())
     }
   }

@@ -1,5 +1,5 @@
 import { useQuery, gql } from '@apollo/client';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { Container } from '../../styles/global';
 import { LoadError } from '../LoadError/LoadError';
@@ -65,7 +65,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
   const [list, setList] = useState<IRepo[]>()
   const [filterTopic, setFilterTopic]: any = useState([])
 
-  const listTopics = () => {
+  const listTopics = useCallback(() => {
     const topics: any = []
     data?.user.repositories.edges.map(i => {
       let items: string[] = []
@@ -90,7 +90,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
       return i
     })
     return topics
-  }
+  }, [filterTopic])
 
   useEffect(() => {
     setList(listData)
