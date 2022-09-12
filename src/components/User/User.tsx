@@ -28,7 +28,6 @@ const User = ({ perfil }: { perfil?: string }) => {
     }
   });
   const user = data?.user
-
   const [userBox, setUserBox] = useState(false)
 
   return <>
