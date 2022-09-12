@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/gitRepo/static/js/main.c9af9444.js",
+    "main.js": "/gitRepo/static/js/main.75d92dcc.js",
     "index.html": "/gitRepo/index.html",
-    "main.c9af9444.js.map": "/gitRepo/static/js/main.c9af9444.js.map"
+    "main.75d92dcc.js.map": "/gitRepo/static/js/main.75d92dcc.js.map"
   },
   "entrypoints": [
-    "static/js/main.c9af9444.js"
+    "static/js/main.75d92dcc.js"
   ]
 }
