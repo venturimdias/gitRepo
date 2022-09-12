@@ -3,7 +3,7 @@ import { setContext } from '@apollo/client/link/context'
 
 const apolloConfig = () => {
   
-  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || 'not env'}`, })
+  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || 'https://api.github.com/graphql'}`, })
   const authLink = setContext((_, { headers }) => {
 
     return {
