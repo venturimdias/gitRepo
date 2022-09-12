@@ -71,7 +71,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
       let items: string[] = []
       i.node.repositoryTopics.edges.map(t => {
         items.push(t.node.topic.name)
-        return
+        return t
       })
       topics.push({
         node: {
@@ -87,8 +87,9 @@ const Repo = ({ perfil }: { perfil?: string }) => {
         }
       })
       setFilterTopic(topics)
-      return
+      return i
     })
+    return topics
   }
 
   useEffect(() => {
@@ -110,6 +111,7 @@ const Repo = ({ perfil }: { perfil?: string }) => {
     filterTopic.filter((i: any) => {
       const topic = i.node.topics
       topic.includes(value) && listFilter.push(i)
+      return i
     })
     setList(listFilter)
   }

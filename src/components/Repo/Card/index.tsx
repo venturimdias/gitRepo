@@ -25,7 +25,7 @@ const Card = ({ isArchived, name, createdAt, url, lang, topics} : ICard) => {
     {/* <img src={openGraphImageUrl} /> */}
     <h2>{name}</h2>
     <div>{moment(createdAt)}</div>
-    <a href={url} target="_blank">Link repositorio</a>
+    <a href={url} target="_blank" rel="noreferrer">Link repositorio</a>
 
     <Language lang={lang} />
     
