@@ -1,5 +1,6 @@
 {
   "name": "git-repo",
+  "homepage": "/gitRepo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
