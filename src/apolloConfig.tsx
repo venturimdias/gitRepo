@@ -2,14 +2,15 @@ import { ApolloClient, InMemoryCache, ApolloProvider, createHttpLink } from '@ap
 import { setContext } from '@apollo/client/link/context'
 
 const apolloConfig = () => {
-  
-  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || 'not env'}`, })
+  //@ts-ignore
+  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || github.graphql_url || 'not env'}`, })
   const authLink = setContext((_, { headers }) => {
 
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || 'not env'}`,
+        //@ts-ignore
+        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || github.token || 'not env'}`,
       }
     }
   })
