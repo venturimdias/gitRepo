@@ -3,13 +3,13 @@ import { setContext } from '@apollo/client/link/context'
 
 const apolloConfig = () => {
   
-  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || 'https://api.github.com/graphql'}`, })
+  const httpLink = createHttpLink({ uri: `${process.env.REACT_APP_GITHUB_URL_GRAPHQL || 'not env'}`, })
   const authLink = setContext((_, { headers }) => {
 
     return {
       headers: {
         ...headers,
-        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || process.env.GITHUB_TOKEN}`,
+        authorization: `Bearer ${process.env.REACT_APP_GITHUB_ACCESS_TOKEN || 'not env'}`,
       }
     }
   })
