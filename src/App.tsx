@@ -5,6 +5,8 @@ import { User } from './components/User/User'
 import GlobalStyle from './styles/global'
 
 function App() {
+  console.log(process.env.GITHUB_TOKEN, process.env.REACT_APP_GITHUB_ACCESS_TOKEN)
+  
   const perfil = "venturimdias" 
   // const perfil = "ErickPetru"
 
