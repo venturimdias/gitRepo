@@ -50,8 +50,8 @@ const Bar = ({ handleFilterCancel, handleArchived, setOrd, ord, handleSearch }: 
           type="text"
           ref={inputSearch}
           onKeyDown={(e: any) => handleSearchInt(e.key)} />
-        <Button onClick={handleFilterCancelInt}>x</Button>
       </div>
+      <Button className="reset" onClick={handleFilterCancelInt}>Limpar filtro</Button>
     </BoxBar>}
   </>
 }
@@ -130,6 +130,10 @@ const Button = styled.button`
   color:${theme.color.white};
   background:${theme.color.prim800};
   border-radius:5px;
+
+  &.reset{
+    background: ${theme.color.black800};
+  }
 `
 
 const Input = styled.input`

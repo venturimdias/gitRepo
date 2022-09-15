@@ -128,7 +128,8 @@ const Repo = ({ perfil }: { perfil?: string }) => {
       ord={ord}
       handleSearch={handleSearch}
     />
-
+    <br/>
+    {list && list?.length > 1 ? `${list?.length} items encontrados`: `${("0"+ list?.length).slice(-2)} item encontrado`}
     <LoadError loading={loading} error={error} />
     <BoxGrid>
       {list && list?.map((repo) => {
