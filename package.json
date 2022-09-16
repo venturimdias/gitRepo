@@ -1,6 +1,5 @@
 {
   "name": "git-repo",
-  "homepage": "https://venturimdias.github.io/gitRepo/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
