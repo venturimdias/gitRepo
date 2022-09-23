@@ -7,9 +7,9 @@ const Footer = () => {
   return <BoxFooter>
     <Container>
       <h6>Contato</h6>
-      <a href="" target="_blank" className="t2">GitHub</a>
-      <a href="" target="_blank" className="t2">Linkedin</a>
-      <a href="" target="_blank" className="t2">Email</a>
+      <a href="https://github.com/venturimdias" target="_blank" className="t2">GitHub</a>
+      <a href="https://www.linkedin.com/in/venturimdias/" target="_blank" className="t2">Linkedin</a>
+      <a href="mailto:venturim.dias@gmail.com" target="_blank" className="t2">Email</a>
     </Container>
   </BoxFooter>
 }

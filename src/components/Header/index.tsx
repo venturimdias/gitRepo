@@ -77,10 +77,12 @@ const Menu = styled.div`
     display:${props => props.className == 'ativo' ? "flex": 'none'};
     flex-direction: column;
     position: absolute;
-    top:0px;
-    left:-60px;
+    z-index: 10;
+    top:30px;
+    left:-100px;
       
     & > a{
+      width:120px;
       background:${theme.color.prim800}
     }
   }
