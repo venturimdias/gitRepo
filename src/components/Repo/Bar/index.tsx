@@ -58,6 +58,7 @@ const Bar = ({ handleFilterCancel, handleArchived, setOrd, ord, handleSearch }: 
 
 const H3 = styled.h3`
   cursor: pointer;
+  font-size:1.8rem;
   font-weight:500;
   text-align: center;
   padding:15px 10px;

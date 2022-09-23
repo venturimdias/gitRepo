@@ -23,9 +23,10 @@ const List = styled.div`
   gap:5px;
 
   & > a{
+    font-size:1.4rem;
     border-radius:4px;
     display:flex;
-    padding:5px 10px 7px;
+    padding:2px 10px;
     border:1px solid ${theme.color.black700};
 
     &:hover{

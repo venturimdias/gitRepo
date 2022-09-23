@@ -4,7 +4,7 @@ interface IloadError{
 }
 const LoadError = ({ loading, error}: IloadError) => {
   return <>
-    {loading && <>Loading...</>}
+    {loading && <div>Loading...</div>}
     {error && <>Error :( {console.log(error)}</>}
   </>
 }
