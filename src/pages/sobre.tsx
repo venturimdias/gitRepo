@@ -32,9 +32,6 @@ const Sobre = () => {
         Alguns trabalhos realizados: Missbela, Videbula, Vigauto, Ivetro, Rede Marcela, Novo site da União Engenharia, Bueraux de Marketing, Dikma.  
         <a href="https://aldabra.com.br/clientes-e-projetos" target="_blank">Veja mais projetos</a>
       </p>
-      
-      <p>
-        </p>
 
       <p>
         Extra:<br/>
