@@ -12,8 +12,8 @@ const Stack = ({ titulo, num, color } : IStack) => {
       <Barra num={num} color={color}></Barra>
 
       <Titulo>
-        {titulo?.toUpperCase()}
-        <small>{num && num +"%"}</small>
+        <span>{titulo?.toUpperCase()}</span> 
+        <span>{num && num +"%"}</span>
       </Titulo>
     </div>
   </>
