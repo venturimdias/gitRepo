@@ -17,11 +17,15 @@ const Sobre = () => {
       <p><small>Serra, Espírito Santo, Brasil </small></p>
 
       <p>
-        Desenvolvedor Front-end há mais de 10 anos, trabalho na empresa Aldabra (<a href="https://www.aldabra.com.br" target="_blank">www.aldabra.com.br</a>). Trabalho atualmente com as seguintes ferramentas: 
-        <strong> HTML, CSS, SCSS, Styled-component, Javascript, Jquery, VS Code, Mysql, React js, Next js, Vue js, Figma, Photoshop, Illustrator e Indesign.</strong> 
+        Desenvolvedor Front-end há mais de 12 anos na empresa Aldabra (<a href="https://www.aldabra.com.br" target="_blank">www.aldabra.com.br</a>). 
       </p>
 
-      <p>Tenho conhecimento básico em: Wordpress, CorelDraw, C#, SQL Server, PHP, Python, Node.js.</p>
+      <p>
+        Trabalho atualmente com as seguintes ferramentas: 
+        <strong> HTML, CSS, SCSS, Styled-component, Javascript, Jquery, VS Code, GraphQL, Mysql, React js, Next js, Vue js, Figma, Photoshop, Illustrator e Indesign.</strong> 
+      </p>
+
+      <p>Tenho conhecimento em: C#, PHP, Python, Node.js, Wordpress, CorelDraw, SQL Server.</p>
 
       <p>
         Inglês - Nível Intermediário/Avançado - Programa Insider (cursando) <br/>

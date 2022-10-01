@@ -40,8 +40,8 @@ const User = ({ perfil }: { perfil?: string }) => {
       <LoadError loading={loading} error={error} />
       {user?.avatarUrl && <img src={user?.avatarUrl} alt={"foto "+ user?.name} />}
       <Desc>
-        <h3>{user?.name}</h3>
-        <h4>{user?.bio}</h4>
+        <h4>{user?.name}</h4>
+        <h5>{user?.bio}</h5>
 
         <div className='links'>
           {user?.url && <a href={user?.url} target="_blank" rel="noreferrer"><GitHubIcon /></a>}
@@ -72,7 +72,7 @@ const BoxUser = styled.div`
   align-items: center;
   padding:20px;
   max-width:380px;
-  width:90%;
+  width: 420px;
   margin:10px auto 20px;
   border-radius:10px;
   color:${theme.color.black700};
@@ -121,18 +121,21 @@ const BoxUser = styled.div`
       right:25px;
     }
   }
+  @media(max-width:420px){
+    width:290px;
+  }
 `
 const Desc = styled.div`
   text-align: center;
   font-size:1.8rem;
   font-weight:500;
 
-  h3{
-    font-size:3.5rem;
+  h4{
+    font-size:3.0rem;
     line-height: 120%;
     color:${theme.color.prim800};
   }
-  h4{
+  h5{
     font-size:1.6rem;
     line-height:150%;
     padding:5px 0 10px;
