@@ -5,7 +5,7 @@ import { Container } from '../styles/global'
 
 const Home = () => {
   return <>
-    <Header />
+    <Header menuActive='home' />
     <Container>
       <h2>Olá!</h2>
       <h3>Sou Jonathan Venturim Dias, desenvolvedor front-end </h3>

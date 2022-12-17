@@ -5,7 +5,7 @@ import { perfil } from "../config"
 
 const GitRepo = () => {
   return <>
-    <Header />
+    <Header menuActive="git" />
     
     <Repo perfil={perfil} />
 

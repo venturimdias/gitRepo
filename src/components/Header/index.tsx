@@ -5,21 +5,24 @@ import { perfil } from '../../config';
 import { MemoryIcon, MenuIcon } from '../svg/Icons';
 import { User } from '../User/User';
 import { theme } from '../../theme/theme';
+import { routerList } from '../../App';
 
-const Header = () => {
+interface HeaderProps{
+  menuActive?:string
+}
+
+const Header = ({ menuActive = '' } : HeaderProps) => {
   const [active, setActive] = useState(false)
-
-  const closeMenu = () => setActive(false)
 
   return <>
     <BoxHeader>
       <h1 className='logo'><MemoryIcon /> JVD </h1>
 
       <MenuPerfil>
-        <Menu className={active ? "ativo" : ''}>
-          <Link to={"/"} onClick={closeMenu}>home</Link>
-          <Link to={"/sobre"} onClick={closeMenu}>sobre</Link>
-          <Link to={"/git-repo"} onClick={closeMenu}>git</Link>
+        <Menu>
+          {routerList.map((i, idx) => {
+            return <Link key={idx} to={i.path} className={menuActive === i.title ? 'active' : ''}>{i.title}</Link>
+          })}
         </Menu>
 
         <MenuMobile onClick={() => setActive(!active)} ><MenuIcon /></MenuMobile>
@@ -71,6 +74,10 @@ const Menu = styled.div`
   & > a{
     display:flex;
     padding:10px 15px;
+
+    &.active{
+      background:${theme.color.prim800}
+    }
   }
 
   @media(max-width:600px){

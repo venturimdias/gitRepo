@@ -6,7 +6,7 @@ import { theme } from "../theme/theme"
 
 const Sobre = () => {
   return <> 
-    <Header />
+    <Header menuActive="sobre" />
     <ContainerBox>
       <h2>Sobre </h2>
 
@@ -57,7 +57,7 @@ const Sobre = () => {
   </>
 }
 
-const ContainerBox = styled(Container)`
+export const ContainerBox = styled(Container)`
   a{
     display:inline-flex;
     text-decoration: underline;
