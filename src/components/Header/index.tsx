@@ -12,20 +12,22 @@ interface HeaderProps{
 }
 
 const Header = ({ menuActive = '' } : HeaderProps) => {
-  const [active, setActive] = useState(false)
+  const [active, setActive] = useState(true)
+
+  const handleMenuMoble = () => setActive(!active)
 
   return <>
     <BoxHeader>
       <h1 className='logo'><MemoryIcon /> JVD </h1>
 
       <MenuPerfil>
-        <Menu>
+        <Menu className={active ? 'active' : ''}>
           {routerList.map((i, idx) => {
             return <Link key={idx} to={i.path} className={menuActive === i.title ? 'active' : ''}>{i.title}</Link>
           })}
         </Menu>
 
-        <MenuMobile onClick={() => setActive(!active)} ><MenuIcon /></MenuMobile>
+        <MenuMobile onClick={() => handleMenuMoble()} ><MenuIcon /></MenuMobile>
         
         <User perfil={perfil} />
       </MenuPerfil>
@@ -81,7 +83,7 @@ const Menu = styled.div`
   }
 
   @media(max-width:600px){
-    display:${props => props.className == 'ativo' ? "flex": 'none'};
+    display:${props => props.className == 'active' ? "flex": 'none'};
     flex-direction: column;
     position: absolute;
     z-index: 10;
